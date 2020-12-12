@@ -1,6 +1,6 @@
 <?php
 //create connection.
-$conn = new mysqli("localhost:3306","bupdy87dvohbr4iw","gtkjmuz9kqpdnzxg","ovlz54dtty1jll9i");
+$conn = new mysqli("g8r9w9tmspbwmsyo.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306","bupdy87dvohbr4iw","gtkjmuz9kqpdnzxg","ovlz54dtty1jll9i");
 extract($_POST); //imports post variables
 if(isset($save)) //it checks whether we clicked the submit button or not.
 {
