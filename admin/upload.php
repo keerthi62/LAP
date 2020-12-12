@@ -45,7 +45,7 @@ if ($uploadOk == 0) {
  <!DOCTYPE html>
  <html>
  <head>
- <script src="https://app.simplefileupload.com/buckets/cd9ab3922544e6f93cf97251adb57bbd.js"></script>
+ <script src="https://app.simplefileupload.com/buckets/d5cdf1d92e5fad70a788a913dedfd673.js"></script>
  </head>
  <body>
  
