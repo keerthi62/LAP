@@ -56,7 +56,5 @@ $conn->close();
 <!DOCTYPE html>
 <html>
 <body>
-<button onclick="window.location.href='register.php'">A</button> 
-<button onclick="window.location.href='register.php'">Sign Up</button> 
 </body>
 </html>
