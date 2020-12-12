@@ -32,6 +32,7 @@ if ($uploadOk == 0) {
       echo "The file ". htmlspecialchars($target_file). " has been uploaded.";
       echo " ";
     } else {
+      die("Connection failed: " . $conn->connect_error);
       echo "Sorry, there was an error uploading your file.";
       echo " ";
     }
