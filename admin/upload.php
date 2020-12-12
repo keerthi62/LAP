@@ -41,13 +41,3 @@ if ($uploadOk == 0) {
   }
 }
 ?>
-
- <!DOCTYPE html>
- <html>
- <head>
- <script src="https://app.simplefileupload.com/buckets/d5cdf1d92e5fad70a788a913dedfd673.js"></script>
- </head>
- <body>
- 
- </body>
- </html>
