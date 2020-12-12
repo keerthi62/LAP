@@ -1,24 +1,9 @@
 <?php
-// // $target_dir = "../uploads/";
-// $conn = new mysqli("g8r9w9tmspbwmsyo.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306","bupdy87dvohbr4iw","gtkjmuz9kqpdnzxg","ovlz54dtty1jll9i");
+$conn = new mysqli("g8r9w9tmspbwmsyo.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306","bupdy87dvohbr4iw","gtkjmuz9kqpdnzxg","ovlz54dtty1jll9i");
 extract($_POST);
-// $target_file = basename($_FILES["fileToUpload"]["name"]);
-// $uploadOk = 1;
-// $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-
-// // Check if file already exists
-// if (file_exists($target_file)) {
-//   echo "Sorry, file already exists.";
-//   echo " ";
-//   $uploadOk = 0;
-// }
-
-// // Check file size
-// if ($_FILES["fileToUpload"]["size"] > 500000) {
-//   echo "Sorry, your file is too large.";
-//   echo " ";
-//   $uploadOk = 0;
-// }
+$target_file = basename($fileToUpload);
+$uploadOk = 1;
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 // // Allow certain file formats
 // if($imageFileType == "jpg" && $imageFileType == "png" && $imageFileType == "jpeg"
@@ -43,6 +28,5 @@ extract($_POST);
 //     echo " ";
 //   }
 // }
-echo $fileToUpload;
-// echo basename($_FILES["fileToUpload"]["name"]);
+echo $imageFileType;
 ?>
