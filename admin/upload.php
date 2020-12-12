@@ -27,7 +27,7 @@ if ($uploadOk == 0) {
   }
   else
   {
-    $query="INSERT INTO files VALUES (urldecode($fileToUpload))";
+    $query="INSERT INTO files VALUES (urlencode($fileToUpload))";
     if ($conn->query($query) === TRUE) {
       echo "The file ". htmlspecialchars($target_file). " has been uploaded.";
       echo " ";
@@ -37,6 +37,6 @@ if ($uploadOk == 0) {
       echo " ";
     }
   }
-  echo urldecode($fileToUpload);
+  echo urlencode($fileToUpload);
 }
 ?>
