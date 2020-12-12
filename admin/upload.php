@@ -44,5 +44,5 @@ extract($_POST);
 //   }
 // }
 echo $fileToUpload;
-echo basename($_FILES["fileToUpload"]["name"]);
+// echo basename($_FILES["fileToUpload"]["name"]);
 ?>
