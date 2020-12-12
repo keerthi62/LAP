@@ -5,7 +5,7 @@ if (is_dir($dir)){
   if ($dh = opendir($dir)){
     while (($file = readdir($dh)) !== false){ 
 	    //loop through the files, skipping . and .., and recursing if necessary
-      if($file != "." && $file != ".."){
+      if($file != "." && $file != ".." && $file != "index.html"){
             echo "<a href='../uploads/" . $file . "' download>" . $file . "</a><br>";
         }
     }
