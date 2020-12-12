@@ -1,15 +1,9 @@
 <?php
-$dir = "../uploads";
-// Open a directory, and read its contents
-if (is_dir($dir)){
-  if ($dh = opendir($dir)){
-    while (($file = readdir($dh)) !== false){ 
-	    //loop through the files, skipping . and .., and recursing if necessary
-      if($file != "." && $file != ".." && $file != "index.html"){
-            echo "<a href='../uploads/" . $file . "' download>" . $file . "</a><br>";
-        }
-    }
-    closedir($dh);
+$conn = new mysqli("g8r9w9tmspbwmsyo.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306","bupdy87dvohbr4iw","gtkjmuz9kqpdnzxg","ovlz54dtty1jll9i"); //create connection.
+$sql = "SELECT * FROM files";
+if ($result = $conn -> query($sql)) {
+  while ($row = $result -> fetch_row()) {
+    echo "<a href='$row[0]' download>" . basename($row[0]) . "</a><br>";
   }
 }
 ?>
