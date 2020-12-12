@@ -34,7 +34,7 @@ if ($uploadOk == 0) {
   echo " ";
 // if everything is ok, try to upload file
 } else {
-  $query="INSERT INTO files VALUES ($filepath)";
+  $query="INSERT INTO files VALUES ($fileToUpload)";
   if ($conn->query($query) === TRUE) {
     echo "The file ". htmlspecialchars($target_file). " has been uploaded.";
     echo " ";
