@@ -3,7 +3,7 @@ $conn = new mysqli("localhost:3306","bupdy87dvohbr4iw","gtkjmuz9kqpdnzxg","ovlz5
 extract($_POST);//imports post variables
 if(isset($save))//it checks whether we clicked the submit button or not
 {
-$sql = "SELECT id,name,roll,branch,dob,email FROM studentdetails WHERE email = '$email'"; //selects the specified columns where emial = entered email
+$sql = "SELECT name,roll,branch,dob,email FROM studentdetails WHERE email = '$email'"; //selects the specified columns where emial = entered email
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) { //if the entered email exists.
