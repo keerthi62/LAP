@@ -19,7 +19,7 @@ if ($uploadOk == 0) {
   echo " ";
 // if everything is ok, try to upload file
 } else {
-  $sql = "SELECT * FROM files where filepath = '$fileToUpload'";
+  $sql = "SELECT * FROM files where filepaths = '$fileToUpload'";
   $result = $conn->query($sql);
   if ($result->num_rows > 0)
   {
