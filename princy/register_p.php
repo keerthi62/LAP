@@ -4,7 +4,6 @@ extract($_POST);//imports post variables
 if(isset($save))//it checks whether we clicked the submit button or not.
 {
 $sql = "SELECT * FROM pdetails"; //selecting all rows from pdetails
-$count = $conn->query($sql)->num_rows; //counts number of rows in student details
 $sql1 = "SELECT * FROM studentdetails where email = '$e'"; //selecting the row from student details where email = entered email.
 $result1 = $conn->query($sql1);
 $sql2 = "SELECT * FROM admindetails where email = '$e'"; //selecting the row from admin details where email = entered email.
@@ -19,7 +18,7 @@ else if($result1->num_rows > 0 or $result2->num_rows > 0) //if user is not a stu
 $msg = "<font color='red'>You cannot register here</font>";
 }
 else{
-$query="INSERT INTO pdetails VALUES ($count+1,'$n','$e','$p',now())"; //inserting the details in specified order.
+$query="INSERT INTO pdetails VALUES ('$n','$e','$p',now())"; //inserting the details in specified order.
 
 
 if ($conn->query($query) === TRUE) {  //if details are inserted succesfully
