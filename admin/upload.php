@@ -23,26 +23,27 @@ if ($uploadOk == 0) {
   $result = $conn->query($sql);
   $check = false;
   while ($row = $result -> fetch_row()) {
-    if(basename($row[0]) == $target_file)
-    {
-      $check = true;
-    }
+//     if(basename($row[0]) == $target_file)
+//     {
+//       $check = true;
+//     }
+    echo basename($row[0]);
   }
   if ($check)
   {
     echo "File name already exists";
   }
-  else
-  {
-    $query="INSERT INTO files VALUES ('$fileToUpload')";
-    if ($conn->query($query) === TRUE) {
-      echo "The file ". htmlspecialchars($target_file). " has been uploaded.";
-      echo " ";
-    } else {
-      die("Connection failed: " . $conn->error);
-      echo "Sorry, there was an error uploading your file.";
-      echo " ";
-    }
-  }
+//   else
+//   {
+//     $query="INSERT INTO files VALUES ('$fileToUpload')";
+//     if ($conn->query($query) === TRUE) {
+//       echo "The file ". htmlspecialchars($target_file). " has been uploaded.";
+//       echo " ";
+//     } else {
+//       die("Connection failed: " . $conn->error);
+//       echo "Sorry, there was an error uploading your file.";
+//       echo " ";
+//     }
+//   }
 }
 ?>
