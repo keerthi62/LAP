@@ -1,16 +1,9 @@
 <?php
-function Download($filename,$url) {
-file_put_contents( $filename,file_get_contents($url))
-}
-
-if (isset($_GET['Download'])) {
-Download($filename,$url);
-}
 $conn = new mysqli("g8r9w9tmspbwmsyo.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306","bupdy87dvohbr4iw","gtkjmuz9kqpdnzxg","ovlz54dtty1jll9i"); //create connection.
 $sql = "SELECT * FROM files";
 if ($result = $conn -> query($sql)) {
   while ($row = $result -> fetch_row()) {
-    echo "<a href='sample_p.php?Download=true&$filename=basename($row[0])&$url=$row[0]'>" . basename($row[0]) . "</a><br>";
+    echo "<a href='download.php?file=basename($row[0])&path=$row[0]'>" . basename($row[0]) . "</a><br>";
   }
 }
 ?>
