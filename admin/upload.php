@@ -4,7 +4,7 @@ extract($_POST);
 $target_file = basename($fileToUpload);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-
+echo $imageFileType;
 // Allow certain file formats
 if($imageFileType == "jpg" && $imageFileType == "png" && $imageFileType == "jpeg"
 && $imageFileType == "gif" ) {
@@ -32,16 +32,16 @@ if ($uploadOk == 0) {
   {
     echo "File name already exists";
   }
-  else
-  {
-    $query="INSERT INTO files VALUES ('$fileToUpload')";
-    if ($conn->query($query) === TRUE) {
-      echo "The file ". htmlspecialchars($target_file). " has been uploaded.";
-      echo " ";
-    } else {
-      echo "Sorry, there was an error uploading your file.";
-      echo " ";
-    }
-  }
+//   else
+//   {
+//     $query="INSERT INTO files VALUES ('$fileToUpload')";
+//     if ($conn->query($query) === TRUE) {
+//       echo "The file ". htmlspecialchars($target_file). " has been uploaded.";
+//       echo " ";
+//     } else {
+//       echo "Sorry, there was an error uploading your file.";
+//       echo " ";
+//     }
+//   }
 }
 ?>
