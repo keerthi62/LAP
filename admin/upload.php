@@ -23,11 +23,10 @@ if ($uploadOk == 0) {
   $result = $conn->query($sql);
   $check = false;
   while ($row = $result -> fetch_row()) {
-//     if(basename($row[0]) == $target_file)
-//     {
-//       $check = true;
-//     }
-    echo basename($row[0]);
+    if(basename($row[0]) == $target_file)
+    {
+      $check = true;
+    }
   }
   if ($check)
   {
