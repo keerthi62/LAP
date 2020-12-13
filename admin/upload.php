@@ -3,12 +3,10 @@ $conn = new mysqli("g8r9w9tmspbwmsyo.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:33
 extract($_POST);
 $target_file = basename($fileToUpload);
 $uploadOk = 1;
-// $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-$filename_from_url = parse_url($url);
-$imageFileType = pathinfo($filename_from_url['path'], PATHINFO_EXTENSION);echo $imageFileType;
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 // Allow certain file formats
-if($imageFileType == "jpg" && $imageFileType == "png" && $imageFileType == "jpeg"
-&& $imageFileType == "gif" ) {
+if($imageFileType == "jpg" || $imageFileType == "png" || $imageFileType == "jpeg"
+|| $imageFileType == "gif" ) {
   echo "Sorry, JPG, JPEG, PNG & GIF files are not allowed.";
   echo " ";
   $uploadOk = 0;
