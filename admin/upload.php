@@ -21,7 +21,14 @@ if ($uploadOk == 0) {
 } else {
   $sql = "SELECT * FROM files where filepaths = '$fileToUpload'";
   $result = $conn->query($sql);
-  if ($result->num_rows > 0)
+  $check = false;
+  while ($row = $result -> fetch_row()) {
+    if(basename($row[0]) == $target_file)
+    {
+      $check = true;
+    }
+  }
+  if ($check)
   {
     echo "File name already exists";
   }
