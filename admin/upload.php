@@ -31,16 +31,16 @@ if ($uploadOk == 0) {
   {
     echo "File name already exists";
   }
-//   else
-//   {
-//     $query="INSERT INTO files VALUES ('$fileToUpload')";
-//     if ($conn->query($query) === TRUE) {
-//       echo "The file ". htmlspecialchars($target_file). " has been uploaded.";
-//       echo " ";
-//     } else {
-//       echo "Sorry, there was an error uploading your file.";
-//       echo " ";
-//     }
-//   }
+  else
+  {
+    $query="INSERT INTO files VALUES ('$fileToUpload')";
+    if ($conn->query($query) === TRUE) {
+      echo "The file ". htmlspecialchars($target_file). " has been uploaded.";
+      echo " ";
+    } else {
+      echo "Sorry, there was an error uploading your file.";
+      echo " ";
+    }
+  }
 }
 ?>
