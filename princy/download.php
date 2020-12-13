@@ -87,7 +87,7 @@ function output_file($file, $name, $mime_type='')
 set_time_limit(0);
 
 /*set your folder*/
-$file_path='uploads/'."your file";
+$file_path='/home/system/Downloads/'."your file";
 
 /*output must be folder/yourfile*/
 
