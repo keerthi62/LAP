@@ -3,8 +3,7 @@ $conn = new mysqli("g8r9w9tmspbwmsyo.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:33
 $sql = "SELECT * FROM files";
 if ($result = $conn -> query($sql)) {
   while ($row = $result -> fetch_row()) {
-    echo "<button type="submit" onclick="window.location.href='$row[0]'">" . basename($row[0]) . "</button>";
-//     echo "<a href='$row[0]' download>" . basename($row[0]) . "</a><br>";
+    echo "<a href='$row[0]' download>" . basename($row[0]) . "</a><br>";
   }
 }
 ?>
@@ -13,11 +12,11 @@ if ($result = $conn -> query($sql)) {
 <html>
 <head>
 <style>
-button{
+a{
 	text-decoration: none;
 	color: blue;
 }
-button:hover{
+a:hover{
 	text-decoration: underline;
 }
 </style>
